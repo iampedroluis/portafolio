@@ -1,0 +1,25 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg d-flex navbar-light ">
+  <div class="container-fluid">
+    <a class="navbar-brand justify-content-start" id="navtitle" href="/">PLG</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav ">
+        <a class="nav-link active" aria-current="page" href="/#projects">Projects</a>
+        <a class="nav-link active" aria-current="page" href="/#roadmap">Road map</a>
+        <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+        <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+        <a class="text-decoration-none m-auto link-dark" href="{% static 'pdfs/CV-PEDROLUIS_GUTIERREZ.pdf'%}" target="_blank"">Download CV
+            <lord-icon class="mb-1"
+                src="https://cdn.lordicon.com/sygggnra.json"
+                trigger="hover"
+                style="width:25px;height:25px;"> 
+            </lord-icon>
+            </a> 
+      </div>
+    </div>
+  </div>
+</nav>

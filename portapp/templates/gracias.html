@@ -1,0 +1,31 @@
+{% extends 'layout2.html' %}
+{% load static%}
+{% block content %} 
+
+{% if messages %}
+{% for message in messages %}
+<script>
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Your email has been sent',
+    showConfirmButton: false,
+    timer: 1500
+  })
+</script>
+{% endfor %}
+
+{% endif %}
+<br>
+<div class="d-flex justify-content-center" width="5px" height="5px">
+<img src="{% static 'img/envio.gif' %}" alt="">
+</div>
+
+<script>
+    setTimeout(function(){
+         window.location.href = '/';
+      }, 3000);
+</script>
+
+
+{% endblock %}
