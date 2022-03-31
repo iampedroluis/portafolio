@@ -77,6 +77,15 @@
         }
         
       }
+
+      @media (max-width:400px){
+        #imgperfil{
+          padding-left: 3em;
+          display:inline;
+          padding-right:0;
+          margin-left: 8em;
+        }
+      }
 body{
     background-image: url("https://64.media.tumblr.com/dea2ced6807fa3d2f2b3c5af4f6f21de/341b68d85d44ee77-1a/s400x600/c6b7ddb4a83dfd2e1b7bc2c8363942349eb034cd.gifv");
     background-repeat: no-repeat;
