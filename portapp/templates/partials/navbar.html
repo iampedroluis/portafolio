@@ -1,24 +1,167 @@
-{% load static%}
-<nav class="navbar navbar-expand-lg d-flex navbar-light ">
-  <div class="container-fluid">
-    <a class="navbar-brand justify-content-start" id="navtitle" href="/">PLG</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon "></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-      <div class="navbar-nav ">
-        <a class="nav-link active" aria-current="page" href="#projects">Projects</a>
-        <a class="nav-link active" aria-current="page" href="/#roadmap">Road map</a>
-        <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+{% extends 'layout.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+<br><br><br>
+<div id="cardpres">
+<div class="container"  id="neu"> 
+    <br>
+    <div class="row ">
+        <img src="{% static 'img/perfil.jpg'%}" id="imgperfil" alt="...">    
+        <br><br>
+        <div class="col ms-5 mt-4">
+        <h2 id="titulo">Hi I am <strong>Pedro Luis </strong> </h2>
+        <h3 id="subtitulo">I am a Python Full-Stack Developer</h3>
+        <p id="parrafo" class="me-5"> I am a Full Stack Programmer, I have knowledge of QA and QC. However, I continue training day after day since I have a good learning capacity and I have the desire to acquire new or deeper knowledge, always motivated with the goal of being able to be part of a technology services company.</p>
         <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
-        <a class="text-decoration-none m-auto link-dark" href="{% static 'pdfs/CV-PEDROLUIS_GUTIERREZ.pdf' %}" target="_blank">Download CV
-            <lord-icon class="mb-1"
+        <a class="btn ms-0 mb-4"  href="{% static 'pdfs/CV-PEDROLUIS_GUTIERREZ.pdf'%}" target="_blank">Download CV
+            <lord-icon 
+                class="pb-1"
                 src="https://cdn.lordicon.com/sygggnra.json"
                 trigger="hover"
-                style="width:25px;height:25px;"> 
+                style="width:25px;height:25px;">
             </lord-icon>
             </a> 
-      </div>
+        </div>
     </div>
+</div>
+</div>
+
+<br><br><br><br>
+<br>
+
+<h1 id="bigtitle">Projects</h1>
+ 
+<br><br><br>
+
+
+
+<div id="projects" class="card-group">
+
+{% for project in projects  %}
+
+<div class="card rounded-3 m-4 bg-light" id="tarpro">
+  <img src="{{ project.image.url}}" class="card-img-top w-100 h-75 " alt="...">
+  <div class="card-body bg-light">
+    <h3>{{ project.title }}</h3>
+    <p class="card-text">{{ project.description | truncatechars:40  }}</p>
+    
   </div>
-</nav>
+  <a class="text-dark" href="{% url 'portfolio:project_detail' project.id %}"><ion-icon name="arrow-forward-circle-outline"  id="flecha" class="ms-4 mb-4 mt-2" style="width:60px;height:60px;"></aion-icon></a>
+    
+</div>
+
+
+{% endfor %}
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+{% block roadmap %}
+
+<div id="roadmap">
+<h1 id="bigtitle" class="ms-5">ROAD MAP</h1>
+</div>
+<br><br> 
+
+<!-- Section: Timeline -->
+<div class="container d-flex justify-content-center ms-5 ">
+  <ul class="timeline-with-icons  ms-4 ">
+    <li class="timeline-item mb-5">
+      <div class="container me-2">
+      <span class="timeline-icon ">
+        <img src="{% static "img/svghtml.svg" %}" style="width:60px;height:60px;"></a>
+      </span>
+
+      <h5 class="fw-bold ms-1">HTML 5</h5>
+      <p class="text-muted mb-2 fw-bold"></p>
+      <p class="text-muted me-2">
+        At the beginning of my career as a programmer, the first technology I learned was HTML 5, this made me understand how a web page is structured and outlined.
+      </p>
+    </div>
+    </li>
+
+    <li class="timeline-item mb-5">
+      <div class="container me-2">
+      <span class="timeline-icon">
+        <i class="fa-brands fa-css3-alt text-primary fa-4x"></i>
+      </span>
+      <h5 class="fw-bold ms-1">CSS 3</h5>
+      <p class="text-muted mb-2 fw-bold"></p>
+      <p class="text-muted me-2">
+        Following with CSS 3, to add styles to our html and web page, within this technology I learned to use frameworks such as Bootstrap and Bulma.
+      </p>
+    </div>
+    </li>
+
+    <li class="timeline-item mb-5">
+      <div class="container me-2">
+      <span class="timeline-icon">
+        <i class="fa-brands fa-js-square text-warning fa-4x"></i>
+      </span>
+      <h5 class="fw-bold ms-1">JavaScript</h5>
+      <p class="text-muted mb-2 fw-bold"></p>
+      <p class="text-muted me-2">
+        With JavaScript I learned that the website comes to life, and that wonderful things can be done with this programming language.
+      </p>
+    </div>
+    </li>
+
+    <li class="timeline-item mb-5">
+      <div class="container ms-2">
+      <span class="timeline-icon">
+        <a><img src="https://cdn.cdnlogo.com/logos/p/3/python.svg"style="width:60px;height:60px;" ></a>
+       
+      </span>
+      <h5 class="fw-bold ms-1">Python</h5>
+      <p class="text-muted mb-2 fw-bold"></p>
+      <p class="text-muted me-2">
+        When I discovered Python, the world of possibilities became great, I learned object-oriented programming, automated website testing, desktop application programs, among many things, in a nutshell Python is my favorite language
+      </p>
+    </div>
+    </li>
+    <li class="timeline-item mb-5">
+      <div class="container ms-2">
+      <span class="timeline-icon">
+        <a><img src="https://cdn.cdnlogo.com/logos/d/3/django.svg" style="width:60px;height: 60px;"></a>
+      </span>
+      <h5 class="fw-bold ms-1">Django</h5>
+      <p class="text-muted mb-2 fw-bold"></p>
+      <p class="text-muted me-2">
+        The Django Python framework made me fully understand the Backend of a website, the magic that happens behind what users see, the interaction with the server, I practiced with many personal projects and I was more and more surprised with what i could build
+      </p>
+    </div>
+    </li>
+    <li class="timeline-item mb-5">
+      <div class="container ms-2">
+      <span class="timeline-icon">
+        <a><img src="https://cdn.cdnlogo.com/logos/m/10/mysql.svg" style="width:60px;height: 60px;"></a>
+      </span>
+      <h5 class="fw-bold ms-1">MySQL</h5>
+      <p class="text-muted mb-2 fw-bold"></p>
+      <p class="text-muted me-2">
+        The importance of the data and how to have it in a place where it can always be consulted and with the Workcrench tool offered by mysql made me understand databases
+      </p>
+    </div>
+    </li>
+  </ul>
+</div>
+
+
+
+{% endblock %}
+
+
+

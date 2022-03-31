@@ -6,17 +6,18 @@
 <img id="imgpro" class="img-fluid" src="{{ project.image.url }}" alt="">
 </div>
 
-<div id="" class="d-flex justify-content-center m-5">
-<a href="#bigtitle" class="text-dark fw-bold"><ion-icon name="chevron-down-outline"></ion-icon></a>
+<div class="d-flex justify-content-center m-5">
+<a id="arrow" href="#desc" class="text-dark fw-bold"><ion-icon id="arrow2"  name="chevron-down-outline"></ion-icon></a>
 </div>
 
 
 
-<div id="" class="d-flex justify-content-center m-5">
+<div id="desc" class="d-flex justify-content-center">
 <div class="text-center">
     <div class="">
-      <h5 id="bigtitle" class="">{{project.title}}</h5>
-      <p class="">{{ project.description }}</p>
+      <h5 id="bigtitle2" class="">{{project.title}}</h5>
+      
+      <p class="m-4">{{ project.description }}</p>
 
     </div>
   </div>

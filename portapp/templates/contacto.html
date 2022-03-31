@@ -1,18 +1,18 @@
 {% extends 'layout2.html' %}
 
 {% block content %} 
-<div class="rounded-3 m-5 p-5" id="contact"> 
+<div class="rounded-3 m-5 pt-2" id="contact"> 
   
   <form class="m-4" method="POST">
     {% csrf_token %}
-    <h2 id="subtitulo">CONTACT</h2>
+    <h2 id="subtitulo m-4">CONTACT</h2>
     <div class="mb-3">
         <label  class="form-label">Full Name</label>
-        <input type="text" class="form-control" name="nombre" >
+        <input id="cname" type="text" class="form-control" name="nombre" >
       </div>
     <div class="mb-3 col">
       <label class="form-label">Email address</label>
-      <input type="email" class="form-control w-75" name="correo">
+      <input id="cemail" type="email" class="form-control" name="correo">
       <div class="form-text">We'll never share your email with anyone else.</div>
     </div>
     <div class="mb-3">
@@ -23,7 +23,7 @@
       <label  class="form-label">Message</label>
       <textarea name="mensaje" class="form-control" aria-label="With textarea"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+    <button type="submit" class="btn btn-primary mt-4 mb-4">Submit</button>
   </form>
 </div>
 

@@ -9,7 +9,7 @@
 
 
 <br><br><br>
-
+<div id="cardpres">
 <div class="container"  id="neu"> 
     <br>
     <div class="row ">
@@ -31,20 +31,22 @@
         </div>
     </div>
 </div>
+</div>
 
 <br><br><br><br>
 <br>
 
-<h1 id="bigtitle">Participation in projects</h1>
+<h1 id="bigtitle">Projects</h1>
+ 
 <br><br><br>
 
 
 
-<div id="projects" class="card-group ms-5 me-5 w-75">
+<div id="projects" class="card-group">
 
 {% for project in projects  %}
 
-<div class="card rounded-3 m-4 bg-light w-75">
+<div class="card rounded-3 m-4 bg-light" id="tarpro">
   <img src="{{ project.image.url}}" class="card-img-top w-100 h-75 " alt="...">
   <div class="card-body bg-light">
     <h3>{{ project.title }}</h3>
@@ -70,84 +72,92 @@
 {% block roadmap %}
 
 <div id="roadmap">
-<h1 id="bigtitle">ROAD MAP</h1>
+<h1 id="bigtitle" class="ms-5">ROAD MAP</h1>
 </div>
 <br><br> 
 
 <!-- Section: Timeline -->
-<section class="container justify-content-center">
-
-  <ul class="timeline-with-icons justify-content-center">
+<div class="container d-flex justify-content-center ms-5 ">
+  <ul class="timeline-with-icons  ms-4 ">
     <li class="timeline-item mb-5">
-      <span class="timeline-icon">
+      <div class="container me-2">
+      <span class="timeline-icon ">
         <img src="{% static "img/svghtml.svg" %}" style="width:60px;height:60px;"></a>
       </span>
 
-      <h5 class="fw-bold ms-4">HTML 5</h5>
+      <h5 class="fw-bold ms-1">HTML 5</h5>
       <p class="text-muted mb-2 fw-bold"></p>
-      <p class="text-muted ms-5">
+      <p class="text-muted me-2">
         At the beginning of my career as a programmer, the first technology I learned was HTML 5, this made me understand how a web page is structured and outlined.
       </p>
+    </div>
     </li>
 
     <li class="timeline-item mb-5">
-
+      <div class="container me-2">
       <span class="timeline-icon">
         <i class="fa-brands fa-css3-alt text-primary fa-4x"></i>
       </span>
-      <h5 class="fw-bold ms-4">CSS 3</h5>
+      <h5 class="fw-bold ms-1">CSS 3</h5>
       <p class="text-muted mb-2 fw-bold"></p>
-      <p class="text-muted ms-5">
+      <p class="text-muted me-2">
         Following with CSS 3, to add styles to our html and web page, within this technology I learned to use frameworks such as Bootstrap and Bulma.
       </p>
+    </div>
     </li>
 
     <li class="timeline-item mb-5">
-
+      <div class="container me-2">
       <span class="timeline-icon">
         <i class="fa-brands fa-js-square text-warning fa-4x"></i>
       </span>
-      <h5 class="fw-bold ms-4">JavaScript</h5>
+      <h5 class="fw-bold ms-1">JavaScript</h5>
       <p class="text-muted mb-2 fw-bold"></p>
-      <p class="text-muted ms-5">
+      <p class="text-muted me-2">
         With JavaScript I learned that the website comes to life, and that wonderful things can be done with this programming language.
       </p>
+    </div>
     </li>
 
     <li class="timeline-item mb-5">
-
+      <div class="container ms-2">
       <span class="timeline-icon">
         <a><img src="https://cdn.cdnlogo.com/logos/p/3/python.svg"style="width:60px;height:60px;" ></a>
        
       </span>
-      <h5 class="fw-bold ms-4">Python</h5>
+      <h5 class="fw-bold ms-1">Python</h5>
       <p class="text-muted mb-2 fw-bold"></p>
-      <p class="text-muted ms-5">
+      <p class="text-muted me-2">
         When I discovered Python, the world of possibilities became great, I learned object-oriented programming, automated website testing, desktop application programs, among many things, in a nutshell Python is my favorite language
       </p>
+    </div>
     </li>
     <li class="timeline-item mb-5">
+      <div class="container ms-2">
       <span class="timeline-icon">
         <a><img src="https://cdn.cdnlogo.com/logos/d/3/django.svg" style="width:60px;height: 60px;"></a>
       </span>
-      <h5 class="fw-bold ms-4">Django</h5>
+      <h5 class="fw-bold ms-1">Django</h5>
       <p class="text-muted mb-2 fw-bold"></p>
-      <p class="text-muted ms-5">
+      <p class="text-muted me-2">
         The Django Python framework made me fully understand the Backend of a website, the magic that happens behind what users see, the interaction with the server, I practiced with many personal projects and I was more and more surprised with what i could build
       </p>
+    </div>
     </li>
     <li class="timeline-item mb-5">
+      <div class="container ms-2">
       <span class="timeline-icon">
         <a><img src="https://cdn.cdnlogo.com/logos/m/10/mysql.svg" style="width:60px;height: 60px;"></a>
       </span>
-      <h5 class="fw-bold ms-4">MySQL</h5>
+      <h5 class="fw-bold ms-1">MySQL</h5>
       <p class="text-muted mb-2 fw-bold"></p>
-      <p class="text-muted ms-5">
+      <p class="text-muted me-2">
         The importance of the data and how to have it in a place where it can always be consulted and with the Workcrench tool offered by mysql made me understand databases
       </p>
+    </div>
     </li>
   </ul>
-</section>
+</div>
 
 
 
